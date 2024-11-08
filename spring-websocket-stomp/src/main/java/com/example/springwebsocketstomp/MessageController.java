@@ -21,7 +21,8 @@ public class MessageController {
     @MessageMapping("/hello")
     public void message(Message message) {
         log.info("message : {}", message.getChannelId());
-        
+        log.info("message sender : {}", message.getSender());
+
         simpMessageSendingOperations.convertAndSend("/sub/channel/" + message.getChannelId(), message);
     }
 }
