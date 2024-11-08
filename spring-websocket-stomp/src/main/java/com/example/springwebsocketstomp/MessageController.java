@@ -23,7 +23,7 @@ public class MessageController {
         log.info("message : {}", message.getChannelId());
         log.info("message sender : {}", message.getSender());
         log.info("message channelId : {}", message.getChannelId());
-        log.info("message data : {}", message.getData());
+//        log.info("message data : {}", message.getData());
 
         simpMessageSendingOperations.convertAndSend("/sub/channel/" + message.getChannelId(), message);
     }
